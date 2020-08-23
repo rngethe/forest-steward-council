@@ -70,7 +70,7 @@ const InnerForm = ({
     )}
     <Submit
       my={3}
-      value="Continue »"
+      value="Proceed»"
       color={color}
       bg={bg}
       mx={inputProps.mx || '0'}
@@ -78,7 +78,7 @@ const InnerForm = ({
       onClick={handleSubmit}
       inverted
     />
-    <Text>Forest Stewardship Council applications are accepted on a rolling basis</Text>
+    <Text>Due to Covid-19, applications are accepted on a rolling basis</Text>
   </form>
 )
 
