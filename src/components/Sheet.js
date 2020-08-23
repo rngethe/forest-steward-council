@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Card, Container, theme } from '@hackclub/design-system'
 
 const Sheet = styled(Card.withComponent(Container))`
   position: relative;
