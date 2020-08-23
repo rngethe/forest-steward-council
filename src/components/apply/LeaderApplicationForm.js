@@ -1,4 +1,5 @@
 import React from 'react'
+import { Text } from '@hackclub/design-system'
 import { AutoSaver, Field, Fieldset, Form } from 'components/Forms'
 import { withFormik } from 'formik'
 import api from 'api'
