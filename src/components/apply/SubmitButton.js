@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import api from 'api'
 import styled from 'styled-components'
+import { LargeButton, Text, theme } from '@hackclub/design-system'
 
 const Root = styled(LargeButton).attrs({
   py: 4,
