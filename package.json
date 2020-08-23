@@ -1,8 +1,8 @@
 {
-  "name": "@hackclub/apply",
-  "description": "Apply to Hack Club at apply.hackclub.com",
-  "version": "0.1.0",
-  "author": "Lachlan Campbell <lachlan@hackclub.com>",
+  "name": "Forest-Steward-Council",
+  "description": "A React app for Forest Steward Council cCrtification",
+  "version": "1.0",
+  "author": "Robert Ngethe <robert.ngethe.rn@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
