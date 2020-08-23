@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Forest Steward Council',
-    siteUrl: 'https://friendly-lamarr-26de6e.netlify.app'
+    siteUrl: 'https://docusign.netlify.app'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
