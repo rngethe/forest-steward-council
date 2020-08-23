@@ -155,7 +155,7 @@ export default class extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title="Apply – Hack Club" />
+        <Helmet title="Forest Steward Council" />
         {this.content()}
       </Layout>
     )
