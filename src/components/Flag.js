@@ -1,4 +1,4 @@
-import { theme } from 'styled-components'
+import { theme } from '@hackclub/design-system'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
