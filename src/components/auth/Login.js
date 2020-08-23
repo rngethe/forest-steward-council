@@ -27,7 +27,7 @@ const Login = ({ userType = 'applicant', color, heading, bg }) => {
     heading || { applicant: 'Start your application' }[userType]
   return (
     <Base color={resultColor} bg={resultBg}>
-      <Helmet title="Log in – Hack Club" />
+      <Helmet title="Log in – FSC.ORG" />
       <FixedFlag />
       <Heading.h1
         fontSize={[4, 5]}
