@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import search from 'search'
 import api from 'api'
-import { Container, Heading, LargeButton } from '@hackclub/design-system'
 
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
