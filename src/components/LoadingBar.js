@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import React from 'react'
+import { Box, Loading } from '@hackclub/design-system'
 import PropTypes from 'prop-types'
 
 const Base = styled(Box)`
