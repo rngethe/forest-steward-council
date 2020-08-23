@@ -78,7 +78,8 @@ const InnerForm = ({
       onClick={handleSubmit}
       inverted
     />
-    <Text>Due to Covid-19 health measures, applications will be processed in the order they were received.  
+    <Text>Due to Covid-19 health measures, applications will be processed in the order they were received.
+    <br />
      <a href="https://fsc.org/en/newsfeed/covid-19-update-for-cbs" target="_blank" rel="noopener noreferrer">
          Learn More
       </a>
