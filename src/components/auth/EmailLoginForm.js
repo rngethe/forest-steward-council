@@ -70,7 +70,7 @@ const InnerForm = ({
     )}
     <Submit
       my={3}
-      value="Proceed»"
+      value="Proceed »"
       color={color}
       bg={bg}
       mx={inputProps.mx || '0'}
@@ -78,7 +78,11 @@ const InnerForm = ({
       onClick={handleSubmit}
       inverted
     />
-    <Text>Due to Covid-19, applications are accepted on a rolling basis</Text>
+    <Text>Due to Covid-19 health measures, applications will be processed in the order they were received.
+     <a href="https://fsc.org/en/newsfeed/covid-19-update-for-cbs" target="_blank" rel="noopener noreferrer">
+        Learn More
+      </a>
+     </Text>
   </form>
 )
 
