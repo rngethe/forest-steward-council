@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Heading, theme } from '@hackclub/design-system'
 
 export const Headline = styled(Heading.h1).attrs({
   fontSize: [6, 7],
