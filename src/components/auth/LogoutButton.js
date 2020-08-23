@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from '@hackclub/design-system'
 import { Link } from 'gatsby'
 import storage from 'storage'
 
