@@ -113,7 +113,7 @@ export default class extends Component {
               style={{ mixBlendMode: 'multiply' }}
             >
               <Heading.h1 fontSize={6} style={{ lineHeight: '1.125' }}>
-                Welcome!
+                Forest Steward Council!
               </Heading.h1>
               <Text fontSize={4} mt={2} mb={3}>
                 We can’t wait to see your application.
