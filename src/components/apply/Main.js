@@ -224,7 +224,7 @@ const Main = props => {
           <SubmitStatus {...submitStatusProps} />{' '}
         </Headline>
         <Text bold fontSize={[3, 4]}>
-          Due to Covid-19 situation, applications are accepted on a rolling basis
+          Due to Covid-19 health measures, only applications submitted through our new self assessment portal are accepted.
         </Text>
         <LeaderInvite id={id} callback={callback} />
         {coLeaderProfiles.length === 0 && (
