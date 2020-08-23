@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Apply to Hack Club',
-    siteUrl: 'https://apply.hackclub.com'
+    title: 'Forest Steward Council',
+    siteUrl: 'https://friendly-lamarr-26de6e.netlify.app'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Hack Club',
-        short_name: 'Hack Club',
+        name: 'Forest Steward Council',
+        short_name: 'Forest Steward Council',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#e42d42',
