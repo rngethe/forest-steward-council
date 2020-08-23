@@ -113,12 +113,10 @@ export default class extends Component {
               style={{ mixBlendMode: 'multiply' }}
             >
               <Heading.h1 fontSize={6} style={{ lineHeight: '1.125' }}>
-                Forest Steward Council!
+                Forest Steward Council
               </Heading.h1>
               <Text fontSize={4} mt={2} mb={3}>
-                We can’t wait to see your application.
-                <br />
-                Let’s get you signed in!
+                Use this tool to self-assess if your qualification meets our requirements for certification.
               </Text>
               <LoginForm
                 bg="black"
