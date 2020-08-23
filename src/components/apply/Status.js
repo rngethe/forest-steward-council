@@ -1,4 +1,5 @@
 import React from 'react'
+import { Badge } from '@hackclub/design-system'
 
 const Status = ({ type, actionable=true, ...props }) => {
   const data = {
