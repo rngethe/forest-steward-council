@@ -1,3 +1,4 @@
+import { theme } from 'styled-components'
 import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
