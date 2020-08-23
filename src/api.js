@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import storage from 'storage'
 
-export const url = 'https://api.hackclub.com/'
+export const url = 'https://abc.com/'
 const methods = ['GET', 'PUT', 'POST', 'PATCH', 'DELETE']
 
 const generateMethod = method => (path, options = {}, fetchOptions = {}) => {
