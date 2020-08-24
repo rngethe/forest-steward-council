@@ -1,6 +1,6 @@
-import { Flex, IconButton, theme } from '@hackclub/design-system'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { Flex, IconButton, theme } from '@hackclub/design-system'
 
 export const SendForm = styled(Flex.withComponent('form'))`
   position: relative;
