@@ -1,10 +1,10 @@
-import styled from 'styled-components'
 import React from 'react'
-import api from 'api'
-import { Label, Input, Text, cx } from '@hackclub/design-system'
-import { Submit } from 'components/Forms'
+import styled from 'styled-components'
 import { withFormik } from 'formik'
+import api from 'api'
+import { Submit } from 'components/Forms'
 import * as yup from 'yup'
+import { Label, Input, Text, cx } from '@hackclub/design-system'
 import storage from 'storage'
 
 const StyledInput = styled(Input)`
@@ -91,7 +91,7 @@ const EmailLoginForm = withFormik({
   enableReinitialize: true,
   validateOnChange: false,
   validationSchema: yup.object().shape({
-    email: yup.string().email('That doesn’t look like a valid email.')
+    email: yup.string().email('Please enter a valid email address.')
   }),
   handleSubmit: (data, { props, setSubmitting }) => {
     if (!data.email) {
@@ -99,7 +99,7 @@ const EmailLoginForm = withFormik({
       return null
     }
     api
-      .post('v1/users/auth', { data })
+      .post('v2/users/auth', { data })
       .then(user => {
         storage.set('userId', user.id)
         storage.set('userEmail', user.email)
