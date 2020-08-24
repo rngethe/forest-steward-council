@@ -1,8 +1,8 @@
 import fetch from 'isomorphic-fetch'
 import storage from 'storage'
 
-export const domain = 'dev-zz8m1t4q.us.auth0.com/'
-export const clientId = 'cTwWme5pirfs5duMsS84lL37UbEghGil'
+export const url = 'dev-zz8m1t4q.us.auth0.com/'
+
 const methods = ['GET', 'PUT', 'POST', 'PATCH', 'DELETE']
 
 const generateMethod = method => (path, options = {}, fetchOptions = {}) => {
