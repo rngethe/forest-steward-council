@@ -25,10 +25,10 @@ export default class extends Component {
     const id = search.get('id')
     this.setState({ id })
     api
-      .get(`v1/leader_profiles/${id}`)
+      .get(`v2/leader_profiles/${id}`)
       .then(json =>
         api
-          .get(`v1/new_club_applications/${json.new_club_application_id}`)
+          .get(`v2/new_club_applications/${json.new_club_application_id}`)
           .then(newClubApp => {
             this.setState({
               status: 'loaded',
