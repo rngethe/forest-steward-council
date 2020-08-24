@@ -1,36 +1,25 @@
-import styled, { keyframes } from "styled-components";
 import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import { Box, Loading } from '@hackclub/design-system'
 
-const BounceAnimation = keyframes`
-  0% { margin-bottom: 0; }
-  50% { margin-bottom: 15px }
-  100% { margin-bottom: 0 }
-`;
-const DotWrapper = styled.div`
-  display: flex;
-  align-items: flex-end;
-`;
-const Dot = styled.div`
-  background-color: black;
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  /* Animation */
-  animation: ${BounceAnimation} 0.5s linear infinite;
-  animation-delay: ${props => props.delay};
-`;
-class LoadingBar extends Component {
-  render() {
-    return (
-      <DotWrapper>
-        <Dot delay="0s" />
-        <Dot delay=".1s" />
-        <Dot delay=".2s" />
-      </DotWrapper>
-    )
+
+const Base = styled(Box)`
+  position: relative;
+  ${props => props.fill && { height: '100vh' }};
+  div {
+    border-radius: 50%;
   }
-}
+`
 
+const LoadingBar = props => (
+  <Base py={5} {...props}>
+    <Loading />
+  </Base>
+)
+
+LoadingBar.propTypes = {
+  fill: PropTypes.bool
+}
 
 export default LoadingBar
