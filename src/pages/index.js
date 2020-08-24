@@ -41,7 +41,7 @@ export default class extends Component {
       return Promise.resolve(null)
     }
     return api
-      .post(`v1/users/${storage.get('userId')}/new_club_applications`)
+      .post(`v2/users/${storage.get('userId')}/new_club_applications`)
       .then(app => app)
   }
 
@@ -63,7 +63,7 @@ export default class extends Component {
       })
     } else {
       api
-        .get(`v1/users/${storage.get('userId')}/new_club_applications`)
+        .get(`v2/users/${storage.get('userId')}/new_club_applications`)
         .then(json => {
           if (json.length === 0) {
             return this.createNewApplication(true)
