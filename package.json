@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "gatsby": "^2.1.32",
+    "@auth0/auth0-react": "^1.0.0",
     "babel-plugin-styled-components": "^1.10.0",
     "formik": "^1.5.1",
     "gatsby-plugin-manifest": "^2.4.23",
