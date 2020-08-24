@@ -116,7 +116,7 @@ export default class extends Component {
                 Forest Steward Council
               </Heading.h1>
               <Text fontSize={4} mt={2} mb={3}>
-                Use this tool to self-assess if your qualification meets our requirements for certification.
+                Use this tool to assess if your qualification meets our requirements for certification.
               </Text>
               <LoginForm
                 bg="black"
