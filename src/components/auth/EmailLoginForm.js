@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import React from 'react'
 import api from 'api'
-import getSeason from '@hackclub/season'
 import { Label, Input, Text, cx } from '@hackclub/design-system'
 import { Submit } from 'components/Forms'
 import { withFormik } from 'formik'
