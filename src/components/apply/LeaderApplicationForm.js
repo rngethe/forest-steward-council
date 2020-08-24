@@ -1,7 +1,7 @@
 import React from 'react'
-import { Text } from '@hackclub/design-system'
-import { AutoSaver, Field, Fieldset, Form } from 'components/Forms'
 import { withFormik } from 'formik'
+import { AutoSaver, Field, Fieldset, Form } from 'components/Forms'
+import { Text } from '@hackclub/design-system'
 import api from 'api'
 
 const InnerForm = ({
@@ -174,7 +174,7 @@ const LeaderApplicationForm = withFormik({
   mapPropsToValues: props => props.params,
   handleSubmit: (data, { setSubmitting, props }) => {
     api
-      .patch(`v1/leader_profiles/${props.id}`, { data })
+      .patch(`v2/leader_profiles/${props.id}`, { data })
       .then(json => {
         setSubmitting(false)
         // update name stored in analytics w/ latest value if it's changed
