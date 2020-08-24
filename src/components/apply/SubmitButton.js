@@ -30,7 +30,7 @@ class SubmitButton extends Component {
     // NOTE(@maxwofford): Give it 3 seconds of waiting to build up anticipation
     setTimeout(() => {
       api
-        .post(`v1/new_club_applications/${applicationId}/submit`)
+        .post(`v2/new_club_applications/${applicationId}/submit`)
         .then(json => {
           callback(json)
         })
