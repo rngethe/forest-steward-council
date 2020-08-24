@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react'
+import Link from 'gatsby-link'
+import api from 'api'
 import styled, { css } from 'styled-components'
 import {
   Box,
@@ -17,8 +19,6 @@ import { Headline } from 'components/Content'
 import Sheet from 'components/Sheet'
 import SubmitButton from 'components/apply/SubmitButton'
 import Status from 'components/apply/Status'
-import Link from 'gatsby-link'
-import api from 'api'
 import storage from 'storage'
 
 const authToken = storage.get('authToken')
@@ -252,7 +252,7 @@ const Main = props => {
                   )
                 ) {
                   api
-                    .delete(`v1/new_club_applications/${id}/remove_user`, {
+                    .delete(`v2/new_club_applications/${id}/remove_user`, {
                       authToken,
                       data: { user_id: profile.user.id }
                     })
