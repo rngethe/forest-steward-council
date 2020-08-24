@@ -1,12 +1,13 @@
-import styled from 'styled-components'
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import api from 'api'
-import getSeason from '@hackclub/season'
-import { Label, Input, Text, cx } from '@hackclub/design-system'
-import { Submit } from 'components/Forms'
 import { withFormik } from 'formik'
 import * as yup from 'yup'
+import getSeason from '@hackclub/season'
 import storage from 'storage'
+import { Label, Input, Text, cx } from '@hackclub/design-system'
+import { Submit } from 'components/Forms'
+
 
 const StyledInput = styled(Input)`
   text-align: inherit;
@@ -133,7 +134,7 @@ const LoginCodeForm = withFormik({
     const strippedLoginCode = unformattedData.loginCode.replace(/\D/g, '')
     const data = { login_code: strippedLoginCode }
     api
-      .post(`v1/users/${props.userId}/exchange_login_code`, { data })
+      .post(`v2/users/${props.userId}/exchange_login_code`, { data })
       .then(json => {
         storage.set('authToken', json.auth_token)
         setSubmitting(false)
