@@ -5,6 +5,8 @@ import storage from 'storage'
 import { Flex, Heading, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
 
+import { Auth0Provider } from "@auth0/auth0-react";
+
 import Pulse from 'pulse'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
