@@ -29,6 +29,16 @@
     "react-helmet": "^5.2.0",
     "@hackclub/design-system": "^0.0.1-14",
     "styled-components": "3.4.10",
-    "yup": "^0.27.0"
+    "yup": "^0.27.0",
+    
+    "body-parser": "~1.18.3",
+    "cookie-parser": "~1.4.3",
+    "ejs": "~2.6.1",
+    "emailjs": "^2.2.0",
+    "express": "~4.16.3",
+    "express-session": "^1.15.6",
+    "morgan": "~1.9.0",
+    "passwordless": "*",
+    "passwordless-mongostore": "*"
   }
 }
