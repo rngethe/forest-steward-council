@@ -12,7 +12,6 @@ import {
   Icon,
   theme
 } from '@hackclub/design-system'
-import getSeason from '@hackclub/season'
 import LeaderInvite from 'components/apply/LeaderInvite'
 import { clubApplicationSchema } from 'components/apply/ClubApplicationForm'
 import { Headline } from 'components/Content'
