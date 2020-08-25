@@ -1,26 +1,14 @@
 import React from 'react'
+import { useAuth0 } from "@auth0/auth0-react";
 import styled from 'styled-components'
 import { withFormik } from 'formik'
 import api from 'api'
 import { Submit } from 'components/Forms'
 import * as yup from 'yup'
-import { Label, Input, Text, cx } from '@hackclub/design-system'
+import { Label, button, Input, Text, cx } from '@hackclub/design-system'
 import storage from 'storage'
 
-const StyledInput = styled(Input)`
-  text-align: inherit;
-  background: ${props => cx(props.color)};
-  color: ${props => cx(props.bg)};
-  border: none;
-  :focus {
-    box-shadow: none !important;
-  }
-  ::placeholder {
-    text-align: inherit;
-    color: ${props => cx(props.bg)};
-    opacity: 0.5;
-  }
-`
+
 
 const InnerForm = ({
   values,
@@ -84,7 +72,15 @@ const InnerForm = ({
       </a>
      </Text>
   </form>
+
+
 )
+
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
 
 const EmailLoginForm = withFormik({
   mapPropsToValues: ({ email }) => ({ email: email || '' }),
