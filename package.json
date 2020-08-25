@@ -26,10 +26,9 @@
     "@hackclub/icons": "^0.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.0",
     "@hackclub/design-system": "^0.0.1-14",
     "styled-components": "3.4.10",
     "yup": "^0.27.0",
-    "netlify-identity-widget": "^1.4.14",    
+    "netlify-identity-widget": "^1.4.14"   
   }
 }
