@@ -8,6 +8,19 @@ import * as yup from 'yup'
 import { Label, button, Input, Text, cx } from '@hackclub/design-system'
 import storage from 'storage'
 
+const StyledInput = styled(Input)`
+  text-align: inherit;
+  background: ${props => cx(props.color)};
+  color: ${props => cx(props.bg)};
+  border: none;
+  :focus {
+    box-shadow: none !important;
+  }
+  ::placeholder {
+    text-align: inherit;
+    color: ${props => cx(props.bg)};
+    opacity: 0.5;
+  }
 
 
 const InnerForm = ({
