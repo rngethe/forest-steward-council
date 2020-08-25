@@ -59,6 +59,24 @@ const InnerForm = ({
         autoFocus
         {...inputProps}
       />
+
+      <StyledInput
+        name="email"
+        placeholder="Email address"
+        color={color}
+        bg={bg}
+        value={values.email}
+        onChange={e => {
+          e.target.value = e.target.value.trim()
+          handleChange(e)
+        }}
+        onBlur={handleBlur}
+        disabled={isSubmitting}
+        autoComplete="off"
+        autoFocus
+        {...inputProps}
+      />
+
     </Label>
     {errors.email && (
       <Text
