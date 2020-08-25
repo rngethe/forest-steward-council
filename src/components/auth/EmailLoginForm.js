@@ -21,7 +21,7 @@ const StyledInput = styled(Input)`
     color: ${props => cx(props.bg)};
     opacity: 0.5;
   }
-
+`
 
 const InnerForm = ({
   values,
