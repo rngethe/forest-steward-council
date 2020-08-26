@@ -11,7 +11,7 @@
     "fmt": "npx prettier \"{src/**,}/*.js\" --single-quote --no-semi --write"
   },
  "dependencies": {
-   "gotrue-js" : "^0.9.26",
+    "netlify-identity-widget": "^1.4.14",
     "@hackclub/design-system": "^0.0.1-14",
     "@hackclub/icons": "^0.0.3",
     "babel-plugin-styled-components": "^1.10.0",
