@@ -10,25 +10,26 @@
     "dev": "gatsby develop",
     "fmt": "npx prettier \"{src/**,}/*.js\" --single-quote --no-semi --write"
   },
-  "dependencies": {
-    "gatsby": "^2.1.32",
+ "dependencies": {
+    "@hackclub/design-system": "^0.0.1-14",
+    "@hackclub/icons": "^0.0.3",
     "babel-plugin-styled-components": "^1.10.0",
     "formik": "^1.5.1",
+    "gatsby": "^2.1.32",
     "gatsby-plugin-manifest": "^2.4.23",
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-resolve-src": "^2.1.0",
-
     "gatsby-plugin-segment": "^1.0.2",
     "gatsby-plugin-styled-components": "^3.0.7",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.20",
-    "prop-types": "^15.7.2",
+    "@hackclub/design-system": "^0.0.1-14",
     "@hackclub/icons": "^0.0.3",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "@hackclub/design-system": "^0.0.1-14",
+    "react-helmet": "^5.2.0",
     "styled-components": "3.4.10",
-    "yup": "^0.27.0",
-    "netlify-identity-widget": "^1.4.14"   
+    "yup": "^0.27.0"
   }
 }
