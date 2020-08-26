@@ -26,13 +26,18 @@ const Full = styled(Flex).attrs({
   height: 100vh;
 `
 
-
+export default class extends Component {
+  state = {
+    status: 'loading',
+    app: undefined,
+    userId: undefined
+  }
 
 
   content() {
-    const { app, status, userId } = this.state
-    switch (status) {
-      case 'needsToAuth':
+    //const { app, status, userId } = this.state
+    //switch (status) {
+      //case 'needsToAuth':
         return (
           <Full>
             <Pulse />
