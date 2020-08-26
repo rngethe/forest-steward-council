@@ -73,6 +73,6 @@ methods.forEach(method => {
   api[method.toLowerCase()] = generateMethod(method)
 })
 
-api.currentUser = () => api.get(`v2/users/current`)
+api.currentUser = () => api.get(`users/current`)
 
 export default api
