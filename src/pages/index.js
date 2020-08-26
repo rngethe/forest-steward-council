@@ -8,7 +8,7 @@ import styled from 'styled-components'
 //import Pulse from 'pulse'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
-import ApplyNav from 'components/apply/ApplyNav'
+//import ApplyNav from 'components/apply/ApplyNav'
 //import Sheet from 'components/Sheet'
 //import Main from 'components/apply/Main'
 import EmailLoginForm from 'components/auth/EmailLoginForm'
@@ -34,10 +34,7 @@ export default class extends Component {
   }
 
 
-  content() {
-    //const { app, status, userId } = this.state
-    //switch (status) {
-      //case 'needsToAuth':
+  content() {:
         return (
           <Full>
             <Pulse />
@@ -62,27 +59,7 @@ export default class extends Component {
             </Sheet>
           </Full>
         )
-      case 'loading':
-        return <LoadingBar fill />
-      case 'finished':
-        return (
-          <Fragment>
-            <ApplyNav breadcrumb={false} />
-            <Pulse />
-            <Main
-              app={app}
-              //userId={userId}
-              //callback={this.populateApplications}
-              //resetCallback={this.resetApplication}
-            />
-          </Fragment>
-        )
-      default:
-        return (
-          <Text color="error" py={4}>
-            Something terrible has happened.
-          </Text>
-        )
+   
     }
   }
 
