@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Link from 'gatsby-link'
-import api from 'api'
+//import api from 'api'
 import styled, { css } from 'styled-components'
 import {
   Box,
