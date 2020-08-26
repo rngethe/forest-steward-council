@@ -71,9 +71,9 @@ export default class extends Component {
             <Pulse />
             <Main
               app={app}
-              userId={userId}
-              callback={this.populateApplications}
-              resetCallback={this.resetApplication}
+              //userId={userId}
+              //callback={this.populateApplications}
+              //resetCallback={this.resetApplication}
             />
           </Fragment>
         )
