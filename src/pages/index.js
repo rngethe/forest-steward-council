@@ -11,7 +11,7 @@ import Layout from 'components/Layout'
 //import ApplyNav from 'components/apply/ApplyNav'
 //import Sheet from 'components/Sheet'
 //import Main from 'components/apply/Main'
-import EmailLoginForm from 'components/auth/EmailLoginForm'
+//import EmailLoginForm from 'components/auth/EmailLoginForm'
 import LoadingBar from 'components/LoadingBar'
 
 LargeButton.link = LargeButton.withComponent(Link)
@@ -51,11 +51,7 @@ export default class extends Component {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>
-              <EmailLoginForm
-                bg="black"
-                color="white"
-                textProps={{ color: 'black', align: 'left', fontSize: 3 }}
-              />
+            <Button.link to="/" children="Logout" {...props} />
             </Sheet>
           </Full>
         )
