@@ -56,7 +56,6 @@ export default class extends Component {
             backgroundColor="green"
             to="/Main" children="Get Started >>" />
             <br />
-            </br />
           
               <Text fontSize={4} mt={2} mb={3}>
               Due to Covid-19 health measures, applications will be processed in the order they were received.
