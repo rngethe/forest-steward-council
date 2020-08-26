@@ -30,5 +30,6 @@ const netlifyAuth = {
     })
   },
 }
+}
 
-export default api;
+export default api
