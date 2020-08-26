@@ -33,6 +33,12 @@ export default class extends Component {
     userId: undefined
   }
 
+  let login = () => {
+    netlifyAuth.authenticate((user) => {
+      setLoggedIn(!!user)
+    })
+  }
+
 
   content() {
         return (
