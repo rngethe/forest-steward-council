@@ -60,23 +60,6 @@ const InnerForm = ({
         {...inputProps}
       />
 
-      <StyledInput
-        name="email"
-        placeholder="Email address"
-        color={color}
-        bg={bg}
-        value={values.email}
-        onChange={e => {
-          e.target.value = e.target.value.trim()
-          handleChange(e)
-        }}
-        onBlur={handleBlur}
-        disabled={isSubmitting}
-        autoComplete="off"
-        autoFocus
-        {...inputProps}
-      />
-
     </Label>
     {errors.email && (
       <Text
@@ -121,7 +104,7 @@ const EmailLoginForm = withFormik({
       return null
     }
     api
-      .post('v2/users/auth', { data })
+      .post('users/auth', { data })
       .then(user => {
         storage.set('userId', user.id)
         storage.set('userEmail', user.email)
