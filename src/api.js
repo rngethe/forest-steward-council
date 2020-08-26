@@ -46,6 +46,18 @@ const netlifyAuth = {
       }
     />
   );
+
+const netlifyAuth = {
+  isAuthenticated: false,
+  user: null,
+  authenticate(callback) {
+    this.isAuthenticated = true;
+    netlifyIdentity.open();
+    netlifyIdentity.on('login', user => {
+      this.user = user;
+      callback(user);
+    });
+  }
 }
 
 export default api
