@@ -23,7 +23,7 @@ import storage from 'storage'
  const user = netlifyIdentity.currentUser();
  console.log({ user });
 
-const authToken = storage.get('authToken')
+//const authToken = storage.get('authToken')
 
 const P = props => <Text my={3} {...props} />
 
