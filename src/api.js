@@ -30,6 +30,5 @@ const netlifyAuth = {
       callback()
     })
   },
-}
 
 export default api
