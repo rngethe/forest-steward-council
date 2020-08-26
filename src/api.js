@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import storage from 'storage'
 
-export const url = 'https://docusign.netlify.app/'
+export const url = 'https://docusign.netlify.app/.netlify/identity/'
 
 const methods = ['GET', 'PUT', 'POST', 'PATCH', 'DELETE']
 
