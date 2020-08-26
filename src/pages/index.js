@@ -26,12 +26,7 @@ const Full = styled(Flex).attrs({
   height: 100vh;
 `
 
-export default class extends Component {
-  state = {
-    status: 'loading',
-    app: undefined,
-    userId: undefined
-  }
+
 
 
   content() {
