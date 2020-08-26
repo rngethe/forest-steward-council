@@ -54,7 +54,7 @@ export default class extends Component {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>
-              <LoginForm
+              <EmailLoginForm
                 bg="black"
                 color="white"
                 textProps={{ color: 'black', align: 'left', fontSize: 3 }}
