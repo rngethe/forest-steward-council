@@ -13,7 +13,7 @@ class Auth extends Component {
 
     if (!preAuthData) {
       api
-        .get(`v2/users/current`)
+        .get(`users/current`)
         .then(authData => {
           console.log(
             `User is authorized! Auth data: ${JSON.stringify(authData)}`
