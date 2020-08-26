@@ -5,13 +5,13 @@ import storage from 'storage'
 import { Flex, Heading, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
 
-import Pulse from 'pulse'
+//import Pulse from 'pulse'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
 import ApplyNav from 'components/apply/ApplyNav'
-import Sheet from 'components/Sheet'
-import Main from 'components/apply/Main'
-import LoginForm from 'components/auth/EmailLoginForm'
+//import Sheet from 'components/Sheet'
+//import Main from 'components/apply/Main'
+import EmailLoginForm from 'components/auth/EmailLoginForm'
 import LoadingBar from 'components/LoadingBar'
 
 LargeButton.link = LargeButton.withComponent(Link)
