@@ -7,6 +7,15 @@ window.netlifyIdentity = netlifyIdentity;
 // You must run this once before trying to interact with the widget
 netlifyIdentity.init();
 
+function access() {
+  return (
+    <Router>
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/components/apply/Main" component={Protected} />
+    </Router>
+  );
+}
+
 const netlifyAuth = {
   isAuthenticated: false,
   user: null,
