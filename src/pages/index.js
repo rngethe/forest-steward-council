@@ -16,6 +16,12 @@ import LoadingBar from 'components/LoadingBar'
 
 LargeButton.link = LargeButton.withComponent(Link)
 
+import netlifyIdentity from 'netlify-identity-widget';
+
+window.netlifyIdentity = netlifyIdentity;
+// You must run this once before trying to interact with the widget
+netlifyIdentity.init();
+
 const Full = styled(Flex).attrs({
   flexDirection: 'column',
   align: 'center',
