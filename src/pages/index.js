@@ -51,7 +51,10 @@ export default class extends Component {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>
-            <Button.link to="apply/Main" children="Get Started >>" />
+            <Button.link 
+            color="green"
+            to="apply/Main" children="Get Started >>" />
+            <br />
           
               <Text>Due to Covid-19 health measures, applications will be processed in the order they were received.
               <br />
