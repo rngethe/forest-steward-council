@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import Helmet from 'react-helmet'
-import netlifyIdentity from 'netlify-identity-widget';
 
 import storage from 'storage'
 import { Flex, Heading, LargeButton, Text } from '@hackclub/design-system'
