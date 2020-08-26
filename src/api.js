@@ -2,7 +2,7 @@ import fetch from 'isomorphic-fetch'
 import storage from 'storage'
 import netlifyIdentity from 'netlify-identity-widget'
 
-const netlifyAuth = {
+const api = {
   isAuthenticated: false,
   user: null,
   initialize(callback) {
