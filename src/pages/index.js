@@ -51,7 +51,7 @@ export default class extends Component {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>
-            <Button.link to="/" children="Logout" {...props} />
+            <Button.link to="apply/Main" children="Get Started >>" />
             </Sheet>
           </Full>
         )
