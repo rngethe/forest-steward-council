@@ -1,12 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import Helmet from 'react-helmet'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect,
-  withRouter
-} from 'react-router-dom';
 import storage from 'storage'
 import { Flex, Heading, Button, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
