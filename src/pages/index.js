@@ -58,11 +58,13 @@ export default class extends Component {
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>
             <Button.link 
-            color="green"
+            backgroundColor="green"
             to="apply/Main" children="Get Started >>" />
             <br />
+            </br />
           
-              <Text>Due to Covid-19 health measures, applications will be processed in the order they were received.
+              <Text fontSize={4} mt={2} mb={3}>
+              Due to Covid-19 health measures, applications will be processed in the order they were received.
               <br />
               <a href="https://fsc.org/en/newsfeed/covid-19-update-for-cbs" target="_blank" rel="noopener noreferrer">
               Learn More
