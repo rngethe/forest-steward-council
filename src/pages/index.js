@@ -11,16 +11,11 @@ import Layout from 'components/Layout'
 import ApplyNav from 'components/apply/ApplyNav'
 import Sheet from 'components/Sheet'
 import Main from 'components/apply/Main'
+import api from 'api
 //import EmailLoginForm from 'components/auth/EmailLoginForm'
 import LoadingBar from 'components/LoadingBar'
 
 LargeButton.link = LargeButton.withComponent(Link)
-
-import netlifyIdentity from 'netlify-identity-widget';
-
-window.netlifyIdentity = netlifyIdentity;
-// You must run this once before trying to interact with the widget
-netlifyIdentity.init();
 
 const Full = styled(Flex).attrs({
   flexDirection: 'column',
@@ -59,7 +54,7 @@ export default class extends Component {
               </Text>
             <Button.link 
             backgroundColor="green"
-            to="apply/Main" children="Get Started >>" />
+            to="/Main" children="Get Started >>" />
             <br />
             </br />
           
