@@ -5,7 +5,7 @@ import storage from 'storage'
 import { Flex, Heading, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
 
-//import Pulse from 'pulse'
+import Pulse from 'pulse'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
 //import ApplyNav from 'components/apply/ApplyNav'
