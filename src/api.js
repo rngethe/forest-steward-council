@@ -28,8 +28,7 @@ const netlifyAuth = {
       this.user = null
       callback()
     })
-  },
-}
+  }
 }
 
 export default api
