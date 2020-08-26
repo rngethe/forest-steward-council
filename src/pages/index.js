@@ -34,7 +34,7 @@ export default class extends Component {
   }
 
 
-  content() {:
+  content() {
         return (
           <Full>
             <Pulse />
