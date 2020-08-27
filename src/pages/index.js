@@ -41,7 +41,7 @@ export default class extends Component {
 
   useEffect(() => {
     let isCurrent = true
-    netlifyAuth.initialize((user) => {
+    api.initialize((user) => {
       if (isCurrent) {
         setLoggedIn(!!user)
       }
@@ -53,7 +53,7 @@ export default class extends Component {
   }, [])
 
   let login = () => {
-    netlifyAuth.authenticate((user) => {
+    api.authenticate((user) => {
       setLoggedIn(!!user)
     })
   }
