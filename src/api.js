@@ -1,33 +1,44 @@
 import fetch from 'isomorphic-fetch'
 import storage from 'storage'
-import netlifyIdentity from 'netlify-identity-widget'
+import { useEffect, useState } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 
-const api = {
-  isAuthenticated: false,
-  user: null,
-  initialize(callback) {
-    window.netlifyIdentity = netlifyIdentity
-    netlifyIdentity.on('init', (user) => {
-      callback(user)
-    })
-    netlifyIdentity.init()
-  },
-  authenticate(callback) {
-    this.isAuthenticated = true
-    netlifyIdentity.open()
-    netlifyIdentity.on('login', (user) => {
-      this.user = user
-      callback(user)
-      netlifyIdentity.close()
-    })
-  },
-  signout(callback) {
-    this.isAuthenticated = false
-    netlifyIdentity.logout()
-    netlifyIdentity.on('logout', () => {
-      this.user = null
-      callback()
-    })
-  },
-}
-export default api
+export const api = (url, options) => {
+  const { getAccessTokenSilently } = useAuth0();
+  const [state, setState] = useState({
+    error: null,
+    loading: true,
+    data: null,
+  });
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { audience, scope, ...fetchOptions } = options;
+        const accessToken = await getAccessTokenSilently({ audience, scope });
+        const res = await fetch(url, {
+          ...fetchOptions,
+          headers: {
+            ...fetchOptions.headers,
+            // Add the Authorization header to the existing headers
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+        setState({
+          ...state,
+          data: await res.json(),
+          error: null,
+          loading: false,
+        });
+      } catch (error) {
+        setState({
+          ...state,
+          error,
+          loading: false,
+        });
+      }
+    })();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return state;
+};
