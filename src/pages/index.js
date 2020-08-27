@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Helmet from 'react-helmet'
 import storage from 'storage'
-//import LoginButton from 'components/auth/LoginButton'
+import LoginButton from 'components/auth/LoginButton'
 import { Flex, Heading, Button, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
@@ -56,12 +56,6 @@ export default class extends Component {
 
           <Button.link to="" onClick={login} children="Get Started >>" />
           <LoginButton />
-          
- const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
-
-  return <Button.link onClick={() => loginWithRedirect()}Get Started >></button>;
-};
           
             <br />
           
