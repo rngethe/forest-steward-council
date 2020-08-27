@@ -31,7 +31,7 @@ const IndexPage = () => {
   const { isLoading } = useAuth0();
 
   if (isLoading) {
-    return <LoadingBar />;
+    return <LoadingBar />
   }
 
 
