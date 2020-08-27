@@ -37,7 +37,7 @@ const IndexPage = () => {
 
 //end
 
-  content()
+  content() {
         return (
           <Full>
             <Pulse />
@@ -72,10 +72,9 @@ const IndexPage = () => {
           </Full>
         )
    
-    //}
   }
 
-  render()   
+  render() {
     return (
       <Layout>
         <Helmet title="Forest Steward Council" />
