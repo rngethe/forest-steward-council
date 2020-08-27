@@ -32,7 +32,7 @@ export default class extends Component {
     userId: undefined
   }
 
-export default function Index() {
+ componentDidMount() {
   let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
