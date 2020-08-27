@@ -32,12 +32,12 @@ export default class extends Component {
     userId: undefined
   }
 
-export default function Home() {
+export default function Index() {
   let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
     let isCurrent = true
-    netlifyAuth.initialize((user) => {
+    api.initialize((user) => {
       if (isCurrent) {
         setLoggedIn(!!user)
       }
