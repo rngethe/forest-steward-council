@@ -18,68 +18,23 @@ import LoadingBar from 'components/LoadingBar'
 
 LargeButton.link = LargeButton.withComponent(Link)
 
-const Full = styled(Flex).attrs({
-  flexDirection: 'column',
-  align: 'center',
-  justify: 'center',
-  p: 3
-})`
-  width: 100vw;
-  height: 100vh;
-`
 const IndexPage = () => {
-  const { isLoading } = useAuth0();
+  const { isLoading, error } = useAuth0();
 
   if (isLoading) {
-    return <LoadingBar />
+    return <Loading />;
   }
 
+  return (
+    <>
+      <ApplyNav />
 
-//end
-
-  content() 
-    {
-        return (
-          <Full>
-            <Pulse />
-            <Sheet
-              maxWidth={36}
-              bg="black"
-              color="white"
-              align="left"
-              style={{ mixBlendMode: 'multiply' }}
-            >
-              <Heading.h1 fontSize={6} style={{ lineHeight: '1.125' }}>
-                Forest Steward Council
-              </Heading.h1>
-              <Text fontSize={4} mt={2} mb={3}>
-                Use this tool to assess if your qualification meet our requirements for certification.
-              </Text>          
-          //<Button.link to="" onClick={login} children="Get Started >>" />
-          
-          <LoginButton />
-          
-            <br />
-          
-              <Text fontSize={2} mt={2} mb={3}>
-              Due to Covid-19 health measures, applications will be processed in the order they were received.
-              <br />
-              <a href="https://fsc.org/en/newsfeed/covid-19-update-for-cbs" target="_blank" rel="noopener noreferrer">
-              Learn More
-              </a>
-              </Text>
-            </Sheet>
-          </Full>
-        )
-   
-  }
-
-  //render() {
-    return (
-      <Layout>
-        <Helmet title="Forest Steward Council" />
-        {this.content()}
-      </Layout>
-   // )
+      <Router>
+        <ProtectedRoute path="/components/apply/Main" component={Main} />
+      </Router>
+    </>
+  );
+};
 
 export default IndexPage;
+
