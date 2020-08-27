@@ -81,5 +81,5 @@ const IndexPage = () => {
         {this.content()}
       </Layout>
    // )
-  }
+
 export default IndexPage;
