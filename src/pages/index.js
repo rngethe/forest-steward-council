@@ -71,8 +71,14 @@ export default class extends Component {
               </Heading.h1>
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
-              </Text>
-            <Button.link to="/" align="center" onClick={login} children="Get Started >>" />
+              </Text>          
+        {loggedIn ? (
+          <div>
+            <Button.link to="/apply/main" align="center" onClick={login} children="Start Application" />
+          </div>
+        ) : (
+          <Button.link onclick={login} children="Get Started >>" />
+        )}
     
             <br />
           
