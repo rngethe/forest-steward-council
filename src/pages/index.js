@@ -25,7 +25,7 @@ const Full = styled(Flex).attrs({
   width: 100vw;
   height: 100vh;
 `
-
+//start
 
 export default class extends Component {
   state = {
@@ -33,6 +33,8 @@ export default class extends Component {
     app: undefined,
     userId: undefined
   }
+
+  export default function Home() {
 
   let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
@@ -54,6 +56,12 @@ export default class extends Component {
       setLoggedIn(!!user)
     })
   }
+  
+  }
+
+//end
+
+
 
   content() {    
         return (
