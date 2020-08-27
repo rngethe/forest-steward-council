@@ -59,7 +59,7 @@ export default class extends Component {
               </Text>
             <div class="text-center">
             <Button.link to="/" onClick={login} children="Get Started >>" />
-            </>
+            <div/>
             <br />
           
               <Text fontSize={4} mt={2} mb={3}>
