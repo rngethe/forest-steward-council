@@ -37,7 +37,7 @@ export default class extends Component {
 
   content() {
     
-  let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
+  let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
     let isCurrent = true
