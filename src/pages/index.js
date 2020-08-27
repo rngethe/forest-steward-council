@@ -82,7 +82,7 @@ export default class extends Component {
             <Button.link to="/apply/main" align="center" onClick={login} children="Start Application" />
           </div>
         ) : (
-          <Button.link onclick={login} children="Get Started >>" />
+          <Button.link to="/" onClick={login} children="Get Started >>" />
         )}
     
             <br />
