@@ -13,7 +13,7 @@
  "dependencies": {
     "react": "^16.13.1",
     "react-router-dom": "^4.3.1",
-    "@auth0/auth0-react": "file:../..",
+    "@auth0/auth0-react": "1.0.0",
 
     "babel-plugin-styled-components": "^1.10.0",
     "formik": "^1.5.1",
