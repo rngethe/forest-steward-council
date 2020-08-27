@@ -37,8 +37,7 @@ const IndexPage = () => {
 
 //end
 
-  content() {
-      const { isLoading } = useAuth0();
+  content()
         return (
           <Full>
             <Pulse />
