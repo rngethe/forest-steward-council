@@ -26,11 +26,11 @@ const Full = styled(Flex).attrs({
   width: 100vw;
   height: 100vh;
 `
-export default class extends Component {
-  state = {
-    status: 'loading',
-    app: undefined,
-    userId: undefined
+const IndexPage = () => {
+  const { isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <Loading />;
   }
 
 
