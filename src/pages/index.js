@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Helmet from 'react-helmet'
 import storage from 'storage'
+import LoginButton from 'components/auth/LoginButton'
 import { Flex, Heading, Button, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
 import { useState, useEffect } from 'react'
@@ -36,30 +37,6 @@ export default class extends Component {
 //end
 
   content() {
-    
-     componentDidMount() {
-   
- let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
-
-  useEffect(() => {
-    let isCurrent = true
-    api.initialize((user) => {
-      if (isCurrent) {
-        setLoggedIn(!!user)
-      }
-    })
-
-    return () => {
-      isCurrent = false
-    }
-  }, [])
-
-  let login = () => {
-    api.authenticate((user) => {
-      setLoggedIn(!!user)
-    })
-  }
-  } //end
         return (
           <Full>
             <Pulse />
@@ -76,14 +53,10 @@ export default class extends Component {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>          
-        {loggedIn ? (
-          <div>
-            <Button.link to="/apply/main" align="center" onClick={login} children="Start Application" />
-          </div>
-        ) : (
+
           <Button.link to="" onClick={login} children="Get Started >>" />
-        )}
-    
+          <LoginButton />
+          
             <br />
           
               <Text fontSize={2} mt={2} mb={3}>
