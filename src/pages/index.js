@@ -37,7 +37,8 @@ const IndexPage = () => {
 
 //end
 
-  content() {
+  content() 
+    {
         return (
           <Full>
             <Pulse />
@@ -54,8 +55,7 @@ const IndexPage = () => {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>          
-
-          <Button.link to="" onClick={login} children="Get Started >>" />
+          <button onClick={() => loginWithRedirect()}>Log In</button>
           
           <LoginButton />
           
