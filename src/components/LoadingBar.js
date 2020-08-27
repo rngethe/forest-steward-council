@@ -1,25 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
-import { Box, Loading } from '@hackclub/design-system'
+import React from 'react';
 
-
-const Base = styled(Box)`
-  position: relative;
-  ${props => props.fill && { height: '100vh' }};
-  div {
-    border-radius: 50%;
-  }
-`
-
-const LoadingBar = props => (
-  <Base py={5} {...props}>
-    <Loading />
-  </Base>
-)
-
-LoadingBar.propTypes = {
-  fill: PropTypes.bool
+export function Loading() {
+  return (
+    <div className="text-center">
+      <div className="spinner-border" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+    </div>
+  );
 }
-
-export default LoadingBar
