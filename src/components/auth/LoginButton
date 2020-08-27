@@ -10,4 +10,4 @@ const LoginButton = () => {
   return <Button.link onClick={() => loginWithRedirect()}Get Started >></button>;
 };
 
-export default Login;
+export default LoginButton;
