@@ -11,7 +11,7 @@ import Layout from 'components/Layout'
 import ApplyNav from 'components/apply/ApplyNav'
 import Sheet from 'components/Sheet'
 import Main from 'components/apply/Main'
-//import api from 'api'
+import api from 'api'
 import { useAuth0 } from '@auth0/auth0-react';
 //import EmailLoginForm from 'components/auth/EmailLoginForm'
 import LoadingBar from 'components/LoadingBar'
