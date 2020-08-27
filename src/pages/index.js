@@ -26,23 +26,18 @@ const Full = styled(Flex).attrs({
   height: 100vh;
 `
 
-   export default function Home() {
-  let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
 
-  useEffect(() => {
-    let isCurrent = true
-    netlifyAuth.initialize((user) => {
-      if (isCurrent) {
-        setLoggedIn(!!user)
-      }
-    })
+export default class extends Component {
+  state = {
+    status: 'loading',
+    app: undefined,
+    userId: undefined
+  }
 
-    return () => {
-      isCurrent = false
-    }
-  }, [])
 
-  let login = () => {
+  content() {
+    
+      let login = () => {
     netlifyAuth.authenticate((user) => {
       setLoggedIn(!!user)
     })
