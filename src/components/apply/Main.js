@@ -60,5 +60,4 @@ export default function Protected() {
      </Formik>
    </div>
  );
- 
- export default main
+}
