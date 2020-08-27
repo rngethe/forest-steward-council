@@ -20,8 +20,22 @@ import SubmitButton from 'components/apply/SubmitButton'
 import Status from 'components/apply/Status'
 import storage from 'storage'
 
- const user = netlifyIdentity.currentUser();
- console.log({ user });
+  let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
+  let [user, setUser] = useState(null)
+
+  useEffect(() => {
+    let isCurrent = true
+    netlifyAuth.initialize((user) => {
+      if (isCurrent) {
+        setLoggedIn(!!user)
+        setUser(user)
+      }
+    })
+
+    return () => {
+      isCurrent = false
+    }
+  }, []);
 
 //const authToken = storage.get('authToken')
 
