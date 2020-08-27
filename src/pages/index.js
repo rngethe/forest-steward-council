@@ -33,7 +33,7 @@ export default class extends Component {
   }
 
 export default function Home() {
-  let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
+  let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
     let isCurrent = true
@@ -49,7 +49,7 @@ export default function Home() {
   }, [])
 
   let login = () => {
-    netlifyAuth.authenticate((user) => {
+    api.authenticate((user) => {
       setLoggedIn(!!user)
     })
   }
