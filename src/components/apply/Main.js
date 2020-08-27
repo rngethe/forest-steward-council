@@ -4,24 +4,25 @@ import { withFormik } from 'formik'
 import { useState, useEffect } from 'react'
 import * as yup from 'yup'
 import api from 'api'
+import LoadingBar from 'components/LoadingBar'
 
-export default function Protected() {
-  let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
-  let [user, setUser] = useState(null)
-
-  useEffect(() => {
-    let isCurrent = true
-    netlifyAuth.initialize((user) => {
-      if (isCurrent) {
-        setLoggedIn(!!user)
-        setUser(user)
-      }
-    })
-
-    return () => {
-      isCurrent = false
+export function Main() {
+  const { loading, error, } = api(
+    `http://localhost:${PORT}/users`,
+    {
+      audience: process.env.GATSBY_AUDIENCE,
+      scope: 'read:users',
     }
-  }, [])
+  );
+  
+    if (loading) {
+    return <LoadingBar />;
+  }
+
+  if (error) {
+    return <Error message={error.message} />;
+  }
+
 
   return (
    <div>
