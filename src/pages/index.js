@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import storage from 'storage'
 import { Flex, Heading, Button, LargeButton, Text } from '@hackclub/design-system'
 import styled from 'styled-components'
-
+import { useState, useEffect } from 'react'
 import Pulse from 'pulse'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
