@@ -61,4 +61,4 @@ export default function Protected() {
    </div>
  );
  
- export default main;
+ export default main
