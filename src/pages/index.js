@@ -87,7 +87,7 @@ export default class extends Component {
     
             <br />
           
-              <Text fontSize={4} mt={2} mb={3}>
+              <Text fontSize={2} mt={2} mb={3}>
               Due to Covid-19 health measures, applications will be processed in the order they were received.
               <br />
               <a href="https://fsc.org/en/newsfeed/covid-19-update-for-cbs" target="_blank" rel="noopener noreferrer">
