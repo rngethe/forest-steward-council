@@ -32,16 +32,14 @@ export default class extends Component {
     userId: undefined
   }
 
- componentDidMount() {
+
+//end
+
+  content() {
+    
+     componentDidMount() {
    
-  const userId = storage.get('userId')
-  this.setState({ userId })
-   
-   const loggedIn = useState(api.isAuthenticated)
-   const setLoggedIn = useState(api.isAuthenticated)
-   
-   
-  //let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
+ let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
     let isCurrent = true
@@ -61,15 +59,7 @@ export default class extends Component {
       setLoggedIn(!!user)
     })
   }
-  }
-
-
-
-
-  
-//end
-
-  content() {    
+  } //end
         return (
           <Full>
             <Pulse />
