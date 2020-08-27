@@ -34,8 +34,6 @@ export default class extends Component {
     userId: undefined
   }
 
-  export default function Home() {
-
   let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
@@ -57,7 +55,6 @@ export default class extends Component {
     })
   }
   
-  }
 
 //end
 
