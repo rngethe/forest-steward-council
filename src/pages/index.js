@@ -34,31 +34,8 @@ export default class extends Component {
     userId: undefined
   }
 
-  let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
-
-  useEffect(() => {
-    let isCurrent = true
-    api.initialize((user) => {
-      if (isCurrent) {
-        setLoggedIn(!!user)
-      }
-    })
-
-    return () => {
-      isCurrent = false
-    }
-  }, [])
-
-  let login = () => {
-    api.authenticate((user) => {
-      setLoggedIn(!!user)
-    })
-  }
   
-
 //end
-
-
 
   content() {    
         return (
@@ -102,6 +79,27 @@ export default class extends Component {
   //}
 
   render() {
+    let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
+
+  useEffect(() => {
+    let isCurrent = true
+    api.initialize((user) => {
+      if (isCurrent) {
+        setLoggedIn(!!user)
+      }
+    })
+
+    return () => {
+      isCurrent = false
+    }
+  }, [])
+
+  let login = () => {
+    api.authenticate((user) => {
+      setLoggedIn(!!user)
+    })
+  }
+  
     return (
       <Layout>
         <Helmet title="Forest Steward Council" />
