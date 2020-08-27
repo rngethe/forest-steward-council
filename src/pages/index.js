@@ -27,12 +27,7 @@ const Full = styled(Flex).attrs({
 `
 //start
 
-export default class extends Component {
-  state = {
-    status: 'loading',
-    app: undefined,
-    userId: undefined
-  }
+
 
   
 //end
