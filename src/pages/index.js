@@ -34,9 +34,6 @@ export default class extends Component {
     userId: undefined
   }
 
-
-  content() {
-    
   let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
@@ -57,9 +54,8 @@ export default class extends Component {
       setLoggedIn(!!user)
     })
   }
-      
 
-
+  content() {    
         return (
           <Full>
             <Pulse />
