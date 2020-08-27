@@ -57,7 +57,9 @@ export default class extends Component {
               <Text fontSize={4} mt={2} mb={3}>
                 Use this tool to assess if your qualification meet our requirements for certification.
               </Text>
+            <div class="text-center">
             <Button.link to="/" onClick={login} children="Get Started >>" />
+            </>
             <br />
           
               <Text fontSize={4} mt={2} mb={3}>
