@@ -75,7 +75,7 @@ const IndexPage = () => {
     //}
   }
 
-  render() {  
+  render()   
     return (
       <Layout>
         <Helmet title="Forest Steward Council" />
