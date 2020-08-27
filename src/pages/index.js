@@ -33,7 +33,15 @@ export default class extends Component {
   }
 
  componentDidMount() {
-  let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
+   
+  const userId = storage.get('userId')
+  this.setState({ userId })
+   
+   const loggedIn = useState(api.isAuthenticated)
+   const setLoggedIn = useState(api.isAuthenticated)
+   
+   
+  //let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
 
   useEffect(() => {
     let isCurrent = true
