@@ -25,7 +25,12 @@ const Full = styled(Flex).attrs({
   width: 100vw;
   height: 100vh;
 `
-//start
+export default class extends Component {
+  state = {
+    status: 'loading',
+    app: undefined,
+    userId: undefined
+  }
 
 
 
@@ -73,28 +78,7 @@ const Full = styled(Flex).attrs({
     }
   //}
 
-  render() {
-    let [loggedIn, setLoggedIn] = useState(api.isAuthenticated)
-
-  useEffect(() => {
-    let isCurrent = true
-    api.initialize((user) => {
-      if (isCurrent) {
-        setLoggedIn(!!user)
-      }
-    })
-
-    return () => {
-      isCurrent = false
-    }
-  }, [])
-
-  let login = () => {
-    api.authenticate((user) => {
-      setLoggedIn(!!user)
-    })
-  }
-  
+  render() {  
     return (
       <Layout>
         <Helmet title="Forest Steward Council" />
