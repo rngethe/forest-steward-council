@@ -54,8 +54,6 @@ export default class extends Component {
               </Text>          
           <Button.link to="/certificationForm"  children="Get Started >>" />
           
-          //<LoginButton />
-          
             <br />
           
               <Text fontSize={2} mt={2} mb={3}>
