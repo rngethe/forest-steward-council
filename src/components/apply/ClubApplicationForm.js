@@ -4,7 +4,7 @@ import { withFormik } from 'formik'
 import * as yup from 'yup'
 import api from 'api'
 
-export const ClubApplicationSchema = yup.object().shape({
+export const certificationForm = yup.object().shape({
   organization_name: yup.string().required(),
   organization_type: yup
     .string()
@@ -180,21 +180,5 @@ const InnerForm = ({
   )
 }
 
-const ClubApplicationForm = withFormik({
-  mapPropsToValues: ({ params }) => params,
-  enableReinitialize: true,
-  handleSubmit: (data, { setSubmitting, props }) => {
-    api
-      .patch(`v2/new_club_applications/${props.id}`, { data })
-      .then(() => {
-        setSubmitting(false)
-      })
-      .catch(e => {
-        console.error(e)
-        setSubmitting(false)
-      })
-  },
-  displayName: 'ClubApplicationForm'
-})(InnerForm)
 
-export default ClubApplicationForm
+export default certificationForm
