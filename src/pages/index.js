@@ -8,7 +8,7 @@ import Pulse from 'pulse'
 import { Link } from 'gatsby'
 import Layout from 'components/Layout'
 import Sheet from 'components/Sheet'
-import LoadingBar from 'components/LoadingBar'
+//import LoadingBar from 'components/LoadingBar'
 
 LargeButton.link = LargeButton.withComponent(Link)
 
@@ -23,7 +23,7 @@ const Full = styled(Flex).attrs({
 `
 export default class extends Component {
   state = {
-    status: 'loading',
+    //status: 'loading',
     app: undefined,
     userId: undefined
   }
