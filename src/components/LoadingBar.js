@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Loading() {
+export function LoadingBar() {
   return (
     <div className="text-center">
       <div className="spinner-border" role="status">
