@@ -2,7 +2,6 @@ import React from 'react'
 import { AutoSaver, Fieldset, Field, Form } from 'components/Forms'
 import { withFormik } from 'formik'
 import * as yup from 'yup'
-import api from 'api'
 
 export const certificationForm = yup.object().shape({
   organization_name: yup.string().required(),
