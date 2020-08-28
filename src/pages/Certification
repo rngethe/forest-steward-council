@@ -3,7 +3,7 @@ import { AutoSaver, Fieldset, Field, Form } from 'components/Forms'
 import { withFormik } from 'formik'
 import * as yup from 'yup'
 
-export const certificationForm = yup.object().shape({
+export const Certification = yup.object().shape({
   organization_name: yup.string().required(),
   organization_type: yup
     .string()
