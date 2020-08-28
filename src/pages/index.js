@@ -21,13 +21,9 @@ const Full = styled(Flex).attrs({
   width: 100vw;
   height: 100vh;
 `
-export default class extends Component {
+export default function Home() {
 
-  state = {
-    status: 'loading',
-    app: undefined,
-    userId: undefined
-  }
+
   content() {
         return (
           <Full>
