@@ -180,4 +180,4 @@ const InnerForm = ({
 }
 
 
-export default certificationForm
+export default Certification
