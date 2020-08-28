@@ -34,8 +34,8 @@ export default class extends Component {
     userId: undefined
   }
 
-  content() 
-    {
+  content() {
+        const { app, status, userId } = this.state
         return (
           <Full>
             <Pulse />
