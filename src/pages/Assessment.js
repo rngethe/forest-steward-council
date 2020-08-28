@@ -3,15 +3,17 @@ import { AutoSaver, Fieldset, Field, Form } from 'components/Forms'
 import { withFormik } from 'formik'
 import * as yup from 'yup'
 
-export const Certification = yup.object().shape({
+export const AssessmentSchema = yup.object().shape({
+  your_name: yup.string().required(),
+  your_company: yup.string().required(),
   organization_name: yup.string().required(),
   organization_type: yup
     .string()
-    .matches(/(educational_organization|government_organization|non_profit)/)
+    .matches(/(private_organization|government_organization|non_profit)/)
     .required(),
   organization_address: yup.string().required(),
-  leaders_team_origin_story: yup.string().required(),
-  progress_general: yup.string().required(),
+  organization_certificate: yup.string().required(),
+  organization_: yup.string().required(),
   progress_student_interest: yup.string().required(),
   progress_meeting_yet: yup.string().required(),
   idea_why: yup.string().required(),
@@ -41,35 +43,49 @@ const InnerForm = ({
   })
   return (
     <Form onSubmit={handleSubmit}>
-      <Fieldset section="school">
-        <Field {...field('high_school_name')} label="Name of high school" />
+      <Fieldset section="personal">
+        <Field {...field('your_name')} label="Please enter your Full names" />
         <Field
-          {...field('high_school_url')}
-          label="Link to your high school’s website, if any"
+          {...field('your_company')}
+          label="Name of the organization"
           type="url"
           optional
         />
         <Field
-          {...field('high_school_type')}
-          label="Type of school"
+          {...field('fsc_cborganization')}
+          label="Type of the organization"
           type="select"
         >
           <option disabled value="">
             Select One
           </option>
-          <option value="public_school">Public school</option>
-          <option value="private_school">Private school</option>
-          <option value="charter_school">Charter school</option>
+          <option value="private_organization">Public Organization</option>
+          <option value="government_organization">Govvernment Organization</option>
+          <option value="non_profit">Not for Profit</option>
         </Field>
         <Field
-          {...field('high_school_address')}
-          label="High school’s full address"
+          {...field('organization_address')}
+          label="Please enter full address of the organization"
           hint="Please include city, state / province, country, and postal code."
           type="textarea"
           rows="3"
         />
+
+
       </Fieldset>
-      <Fieldset section="leaders">
+      <Fieldset section="Assessment">
+        <Field
+          {...field('fsc_certificate')}
+          label="Type of Certification you are applying for"
+          type="select"
+        >
+          <option disabled value="">
+            Select One
+          </option>
+          <option value="certificate_one">certificate one</option>
+          <option value="certificate_two">certificate two</option>
+          <option value="certificate_three">certificate three</option>
+        </Field>
         <Field
           {...field('point_of_contact_id')}
           label="President / equivalent position"
