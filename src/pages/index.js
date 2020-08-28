@@ -24,8 +24,10 @@ const Full = styled(Flex).attrs({
 export default function Home() {
 
 
-  content() {
+  //content() {
         return (
+          <Layout>
+          <Helmet title="Forest Steward Council" />
           <Full>
             <Pulse />
             <Sheet
@@ -54,17 +56,11 @@ export default function Home() {
               </Text>
             </Sheet>
           </Full>
+           </Layout>
         )
    
   }
 
-  render() {
-    return (
-      <Layout>
-        <Helmet title="Forest Steward Council" />
-        {this.content()}
-      </Layout>
-   )
-}
+
 }
 
