@@ -29,7 +29,7 @@ export default class extends Component {
   }
 
 
-  //content() {
+  content() {
         return (
           <Layout>
           <Helmet title="Forest Steward Council" />
