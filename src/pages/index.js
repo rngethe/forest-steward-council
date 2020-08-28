@@ -71,7 +71,7 @@ export default class extends Component {
    
   }
 
-  //render() {
+  render() {
     return (
       <Layout>
         <Helmet title="Forest Steward Council" />
