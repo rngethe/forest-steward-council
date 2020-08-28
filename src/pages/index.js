@@ -62,3 +62,6 @@ export default function Index() {
   }
 
 
+export default Home
+
+
